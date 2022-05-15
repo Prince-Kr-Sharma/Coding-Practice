@@ -12,10 +12,8 @@ public class MaxAndMinSumInArray {
 	
 	
 	static void maxMin(int[] arr,int max, int min, int index ) {
-		
-		int l= arr.length-1;
-		
-		if(arr[index]==l) {
+	
+		if(index==arr.length) {
 			System.out.println("max: "+max+", min: "+min);
 			return;
 		}
