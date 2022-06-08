@@ -19,21 +19,18 @@ public class SubsetSum {
 		
         // code here
 		ArrayList<Integer> ans= new ArrayList<Integer>();
-		combination(arr, N, 0, 0, new ArrayList<Integer>(),ans );
+		combination(arr, N, 0, 0, ans );
 		Collections.sort(ans);
 		return ans;
     }
 	
-	static void combination(ArrayList<Integer> a, int n, int sum, int index,ArrayList<Integer> ar,ArrayList<Integer> ans) {
+	static void combination(ArrayList<Integer> a, int n, int sum, int index, ArrayList<Integer> ans) {
 		if(index==n) {
 			ans.add(sum);
 			return;
 		}
-		
-		ar.add(a.get(index));
-		combination(a, n, sum+a.get(index), index+1, ar,ans);
-		ar.remove(ar.size()-1);
-		combination(a, n, sum, index+1, ar,ans);
+		combination(a, n, sum+a.get(index), index+1, ans); // pick the element
+		combination(a, n, sum, index+1, ans); // don't pick the element
 	}
 
 }
