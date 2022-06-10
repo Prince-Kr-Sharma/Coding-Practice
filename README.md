@@ -1,3 +1,3 @@
 # Coding-Practice
-Practice and Learning of DSA using Java.
+Practice of DSA using Java.
 
